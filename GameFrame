@@ -1,0 +1,76 @@
+package startmenu;
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class GameFrame extends JInternalFrame {
+	
+	// PROPERTIES
+	StartMenuPanel smenu;
+	GamePanel gpanel;
+	Game game;
+	CardLayout cardLayout;
+	OptionsView optionsView;
+	TeamView teamView;
+	
+	// CONSTRUCTOR
+	public GameFrame (StartMenuPanel smenu, GamePanel gpanel, Game game, OptionsView optionsView) {
+		super("OttomanTimeline");
+		this.gpanel = gpanel;
+		this.smenu = smenu;
+		this.game = game;
+		this.optionsView = optionsView;
+		teamView = new TeamView(game);
+		cardLayout = new CardLayout();
+		this.getContentPane().setLayout(cardLayout);
+		this.getContentPane().add(smenu, "MainMenu");
+		this.getContentPane().add(gpanel, "Game");
+		this.getContentPane().add(optionsView, "Options");
+		this.getContentPane().add(teamView, "Team");
+		//this.setSize(1200, 900);
+	}
+	
+	// METHOD
+	public void updatePanel() {
+		if (game.getState() == Game.STATE.Options){
+			cardLayout.show(this.getContentPane(), "Options");
+		}
+		else if (game.getState() == Game.STATE.Game) {
+			cardLayout.show(this.getContentPane(), "Game");
+		}
+		else if (game.getState() == Game.STATE.Options){
+			cardLayout.show(this.getContentPane(), "Options");
+		}
+		else if (game.getState() == Game.STATE.Menu){
+			cardLayout.show(this.getContentPane(), "MainMenu");
+		}
+		else if (game.getState() == Game.STATE.Team){
+			cardLayout.show(this.getContentPane(), "Team");
+		}
+		else if (game.getState() == Game.STATE.Exit) {
+			setVisible(false); //you can't see me!
+			dispose(); //Destroy the JFrame object
+		}
+		else if (game.getState() == Game.STATE.Menu){
+			cardLayout.show(this.getContentPane(), "MainMenu");
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		
+		Game game = new Game();
+		StartMenuPanel smenuP = new StartMenuPanel(game);
+		GamePanel gpanelP = new GamePanel(game);
+		OptionsView options = new OptionsView(game);
+		GameFrame frame = new GameFrame (smenuP, gpanelP, game, options);
+		game.setGameFrame(frame);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setResizable(false);
+		frame.setVisible(true);
+
+	}
+
+}
