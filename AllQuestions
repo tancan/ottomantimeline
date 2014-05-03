@@ -1,0 +1,1105 @@
+package startmenu;
+import javax.swing.*;
+
+import java.util.*;
+
+public class AllQuestions
+{
+	
+	private QuestionBag qList1,qList2,qList3,qList4,qList5,qList6,qList7,qList8,qList9,qList10,
+								qList11,qList12,qList13,qList14,qList15,qList16,qList17,qList18,qList19,qList20,
+								qList21,qList22,qList23,qList24,qList25,qList26,qList27,qList28,qList29,qList30;
+	
+	private ArrayList<QuestionBag> arr;
+	
+	// Periods
+	Period period1;
+	int index;
+	
+	// Creates Questions
+	public AllQuestions() {
+		
+		// Initialize
+		index = 0;
+		arr = new ArrayList<QuestionBag>();
+		
+		// PERIODS
+		period1 = new Period ( 1300, new ImageIcon("graphics\\1300.png"));
+		Period period2 = new Period ( 1359, new ImageIcon("graphics\\1359.png"));
+		period1.setNextPeriod (period2);
+		Period period3 = new Period ( 1451, new ImageIcon("graphics\\1451.png"));
+		period2.setNextPeriod (period3);
+		Period period4 = new Period ( 1481, new ImageIcon("graphics\\1481.png"));
+		period3.setNextPeriod (period4);
+		Period period5 = new Period ( 1520, new ImageIcon("graphics\\1520.gif"));
+		period4.setNextPeriod (period5);
+		Period period6 = new Period ( 1566, new ImageIcon("graphics\\1566.gif"));
+		period5.setNextPeriod (period6);
+		Period period7 = new Period ( 1639, new ImageIcon("graphics\\1639.gif"));
+		period6.setNextPeriod (period7);
+		Period period8 = new Period ( 1672, new ImageIcon("graphics\\1672.gif"));
+		period7.setNextPeriod (period8);
+		Period period9 = new Period ( 1683, new ImageIcon("graphics\\1683.gif"));
+		period8.setNextPeriod (period9);
+		Period period10 = new Period ( 1699, new ImageIcon("graphics\\1699.gif"));
+		period9.setNextPeriod (period10);
+		Period period11 = new Period ( 1718, new ImageIcon("graphics\\1718.gif"));
+		period10.setNextPeriod (period11);
+		Period period12 = new Period ( 1739, new ImageIcon("graphics\\1739.gif"));
+		period11.setNextPeriod (period12);
+		Period period13 = new Period ( 1774, new ImageIcon("graphics\\1774.gif"));
+		period12.setNextPeriod (period13);
+		Period period14 = new Period ( 1783, new ImageIcon("graphics\\1783.gif"));
+		period13.setNextPeriod (period14);
+		Period period15 = new Period ( 1792, new ImageIcon("graphics\\1792.gif"));
+		period14.setNextPeriod (period15);
+		Period period16 = new Period ( 1798, new ImageIcon("graphics\\1798.gif"));
+		period15.setNextPeriod (period16);
+		Period period17 = new Period ( 1801, new ImageIcon("graphics\\1801.gif"));
+		period16.setNextPeriod (period17);
+		Period period18 = new Period ( 1812, new ImageIcon("graphics\\1812.gif"));
+		period17.setNextPeriod (period18);
+		Period period19 = new Period ( 1817, new ImageIcon("graphics\\1817.gif"));
+		period18.setNextPeriod (period19);
+		Period period20 = new Period ( 1829, new ImageIcon("graphics\\1829.png"));
+		period19.setNextPeriod (period20);
+		Period period21 = new Period ( 1830, new ImageIcon("graphics\\1830.gif"));
+		period20.setNextPeriod (period21);
+		Period period22 = new Period ( 1862, new ImageIcon("graphics\\1862.gif"));
+		period21.setNextPeriod (period22);
+		Period period23 = new Period ( 1878, new ImageIcon("graphics\\1878.gif"));
+		period22.setNextPeriod (period23);
+		Period period24 = new Period ( 1881, new ImageIcon("graphics\\1881.gif"));
+		period23.setNextPeriod (period24);
+		Period period25 = new Period ( 1882, new ImageIcon("graphics\\1882.gif"));
+		period24.setNextPeriod (period25);
+		Period period26 = new Period ( 1912, new ImageIcon("graphics\\1912.gif"));
+		period25.setNextPeriod (period26);
+		Period period27 = new Period ( 1913, new ImageIcon("graphics\\1913.gif"));
+		period26.setNextPeriod (period27);
+		Period period28 = new Period ( 1914, new ImageIcon("graphics\\1913b.gif"));
+		period27.setNextPeriod (period28);
+		Period period29 = new Period ( 1920, new ImageIcon("graphics\\1920.gif"));
+		period28.setNextPeriod (period29);
+		Period period30 = new Period ( 1923, new ImageIcon("graphics\\1923.gif"));
+		period29.setNextPeriod (period30);
+		
+		/********************** PERIOD 1****************
+		 *********************** 1300*******************
+		 ***********************************************/
+		// Add Padisahs
+		Padisah osman = new Padisah ("Osman Gazi", "1299-1326", null);
+		Padisah orhan = new Padisah ("Orhan Gazi", "1326-1362", null);
+		period1.addPadisah(osman);
+		period1.addPadisah(orhan);
+		
+		// Q1
+		ImageIcon q1_1300_icon = new ImageIcon("graphics\\1300_q1.png");
+		String q1_1300_Text = "Where is Ottoman Empire found?";
+		Question q1_1300 = new Question(q1_1300_Text, q1_1300_icon);
+		
+		// A1
+		ImageIcon a1_1300_icon = new ImageIcon("graphics\\1300_a1.jpg");
+		String a1_1300_Text = "Naber?";
+		Answer a1_1300 = new Answer(q1_1300_Text, q1_1300_icon);
+		q1_1300.setAnswer(a1_1300);
+		
+		// Q1 add Answers
+		q1_1300.add("Nicaea");
+		q1_1300.add("Bursa");
+		q1_1300.add("St");
+		q1_1300.setRightAnswerIndex(2);
+		q1_1300.add("Adrianople");
+		
+		// Q2
+		ImageIcon q2_1300_icon = null;
+		String q2_1300_Text = "yi senden";
+		Question q2_1300 = new Question(q2_1300_Text, q2_1300_icon);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList1 = new QuestionBag();
+		qList1.add(q1_1300);
+		qList1.add(q2_1300);
+		period1.setqBag(qList1);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1300 = new ImageIcon("graphics\\1300dinfo.png");
+		String dinfo_1300_text = "Upon the demise of the Turkish Seljuk Sultanate of Rum, precursor of Ottomans, in 1300s, Anatolia was divided into a patchwork of independent, mostly Turkish states, the so-called Ghazi emirates. One of the Ghazi emirates was led by Osman I (1258[13]  1326), from which the name Ottoman is derived. Osman I extended the frontiers of Turkish settlement toward the edge of the Byzantine Empire. It is not well understood how the Osmanli came to dominate their neighbours, as the history of medieval Anatolia is still little known.";
+		DetailedInfo info1300 = new DetailedInfo (dinfo_1300_text, "Birth of An Empire", dinfo_1300);
+		period1.setInfo(info1300);
+		
+		/********************** PERIOD 2****************
+		 *********************** 1359*******************
+		 ***********************************************/
+		// Add Padisahs
+		Padisah murat = new Padisah ("Murad I", "1362-1389", null);
+		Padisah yildirim = new Padisah ("Bayezid I", "1389-1402", null);
+		period2.addPadisah(murat);
+		period2.addPadisah(yildirim);
+		
+		// Q1
+		ImageIcon q1_1359_icon = new ImageIcon("graphics\\1359_q1.png");
+		String q1_1359_Text = "";
+		Question q1_1359 = new Question(q1_1359_Text, q1_1359_icon);
+		
+		// A1
+		ImageIcon a1_1359_icon = new ImageIcon("graphics\\1359_a1.jpg");
+		String a1_1359_Text = "";
+		Answer a1_1359 = new Answer(q1_1359_Text, q1_1359_icon);
+		q1_1359.setAnswer(a1_1359);
+		
+		// Q1 add Answers
+		q1_1359.add("Choose0");
+		q1_1359.add("Choose1");
+		q1_1359.add("Choose2");
+		q1_1359.add("Choose3");
+		q1_1359.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList2 = new QuestionBag();
+		qList2.add(q1_1359);
+		period2.setqBag(qList2);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1359 = new ImageIcon("graphics\\1359dinfo.png");
+		String dinfo_1359_text = "";
+		DetailedInfo info1359 = new DetailedInfo (dinfo_1359_text, "", dinfo_1359);
+		period2.setInfo(info1359);
+		
+		/********************** PERIOD 3****************
+		 *********************** 1451*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1451_icon = new ImageIcon("graphics\\1451_q1.png");
+		String q1_1451_Text = "";
+		Question q1_1451 = new Question(q1_1451_Text, q1_1451_icon);
+		
+		// A1
+		ImageIcon a1_1451_icon = new ImageIcon("graphics\\1451_a1.jpg");
+		String a1_1451_Text = "";
+		Answer a1_1451 = new Answer(q1_1451_Text, q1_1451_icon);
+		q1_1451.setAnswer(a1_1451);
+		
+		// Q1 add Answers
+		q1_1451.add("Choose0");
+		q1_1451.add("Choose1");
+		q1_1451.add("Choose2");
+		q1_1451.add("Choose3");
+		q1_1451.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList3 = new QuestionBag();
+		qList3.add(q1_1451);
+		period3.setqBag(qList3);
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1451 = new ImageIcon("graphics\\1451dinfo.png");
+		String dinfo_1451_text = "";
+		DetailedInfo info1451 = new DetailedInfo (dinfo_1451_text, "", dinfo_1451);
+		period3.setInfo(info1451);
+		
+		/********************** PERIOD 4****************
+		 *********************** 1481*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1481_icon = new ImageIcon("graphics\\1481_q1.png");
+		String q1_1481_Text = "";
+		Question q1_1481 = new Question(q1_1481_Text, q1_1481_icon);
+		
+		// A1
+		ImageIcon a1_1481_icon = new ImageIcon("graphics\\1481_a1.jpg");
+		String a1_1481_Text = "";
+		Answer a1_1481 = new Answer(q1_1481_Text, q1_1481_icon);
+		q1_1481.setAnswer(a1_1481);
+		
+		// Q1 add Answers
+		q1_1481.add("Choose0");
+		q1_1481.add("Choose1");
+		q1_1481.add("Choose2");
+		q1_1481.add("Choose3");
+		q1_1481.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList4 = new QuestionBag();
+		qList4.add(q1_1481);
+		period4.setqBag(qList4);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1481 = new ImageIcon("graphics\\1481dinfo.png");
+		String dinfo_1481_text = "";
+		DetailedInfo info1481 = new DetailedInfo (dinfo_1481_text, "", dinfo_1481);
+		period4.setInfo(info1481);
+		
+		/********************** PERIOD 5****************
+		 *********************** 1520*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1520_icon = new ImageIcon("graphics\\1520_q1.png");
+		String q1_1520_Text = "";
+		Question q1_1520 = new Question(q1_1520_Text, q1_1520_icon);
+		
+		// A1
+		ImageIcon a1_1520_icon = new ImageIcon("graphics\\1520_a1.jpg");
+		String a1_1520_Text = "";
+		Answer a1_1520 = new Answer(q1_1520_Text, q1_1520_icon);
+		q1_1520.setAnswer(a1_1520);
+		
+		// Q1 add Answers
+		q1_1520.add("Choose0");
+		q1_1520.add("Choose1");
+		q1_1520.add("Choose2");
+		q1_1520.add("Choose3");
+		q1_1520.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList5 = new QuestionBag();
+		qList5.add(q1_1520);
+		period5.setqBag(qList5);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1520 = new ImageIcon("graphics\\1520dinfo.png");
+		String dinfo_1520_text = "";
+		DetailedInfo info1520 = new DetailedInfo (dinfo_1520_text, "", dinfo_1520);
+		period5.setInfo(info1520);
+		
+		/********************** PERIOD 6****************
+		 *********************** 1566*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1566_icon = new ImageIcon("graphics\\1566_q1.png");
+		String q1_1566_Text = "";
+		Question q1_1566 = new Question(q1_1566_Text, q1_1566_icon);
+		
+		// A1
+		ImageIcon a1_1566_icon = new ImageIcon("graphics\\1566_a1.jpg");
+		String a1_1566_Text = "";
+		Answer a1_1566 = new Answer(q1_1566_Text, q1_1566_icon);
+		q1_1566.setAnswer(a1_1566);
+		
+		// Q1 add Answers
+		q1_1566.add("Choose0");
+		q1_1566.add("Choose1");
+		q1_1566.add("Choose2");
+		q1_1566.add("Choose3");
+		q1_1566.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList6 = new QuestionBag();
+		qList6.add(q1_1566);
+		period6.setqBag(qList6);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1566 = new ImageIcon("graphics\\1566dinfo.png");
+		String dinfo_1566_text = "";
+		DetailedInfo info1566 = new DetailedInfo (dinfo_1566_text, "", dinfo_1566);
+		period6.setInfo(info1566);
+		
+		/********************** PERIOD 7****************
+		 *********************** 1639*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1639_icon = new ImageIcon("graphics\\1639_q1.png");
+		String q1_1639_Text = "";
+		Question q1_1639 = new Question(q1_1639_Text, q1_1639_icon);
+		
+		// A1
+		ImageIcon a1_1639_icon = new ImageIcon("graphics\\1639_a1.jpg");
+		String a1_1639_Text = "";
+		Answer a1_1639 = new Answer(q1_1639_Text, q1_1639_icon);
+		q1_1639.setAnswer(a1_1639);
+		
+		// Q1 add Answers
+		q1_1639.add("Choose0");
+		q1_1639.add("Choose1");
+		q1_1639.add("Choose2");
+		q1_1639.add("Choose3");
+		q1_1639.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList7 = new QuestionBag();
+		qList7.add(q1_1639);
+		period7.setqBag(qList7);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1639 = new ImageIcon("graphics\\1639dinfo.png");
+		String dinfo_1639_text = "";
+		DetailedInfo info1639 = new DetailedInfo (dinfo_1639_text, "", dinfo_1639);
+		period7.setInfo(info1639);
+		
+		/********************** PERIOD 8****************
+		 *********************** 1672*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1672_icon = new ImageIcon("graphics\\1672_q1.png");
+		String q1_1672_Text = "";
+		Question q1_1672 = new Question(q1_1672_Text, q1_1672_icon);
+		
+		// A1
+		ImageIcon a1_1672_icon = new ImageIcon("graphics\\1672_a1.jpg");
+		String a1_1672_Text = "";
+		Answer a1_1672 = new Answer(q1_1672_Text, q1_1672_icon);
+		q1_1672.setAnswer(a1_1672);
+		
+		// Q1 add Answers
+		q1_1672.add("Choose0");
+		q1_1672.add("Choose1");
+		q1_1672.add("Choose2");
+		q1_1672.add("Choose3");
+		q1_1672.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList8 = new QuestionBag();
+		qList8.add(q1_1672);
+		period8.setqBag(qList8);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1672 = new ImageIcon("graphics\\1672dinfo.png");
+		String dinfo_1672_text = "";
+		DetailedInfo info1672 = new DetailedInfo (dinfo_1672_text, "", dinfo_1672);
+		period8.setInfo(info1672);
+		
+		/********************** PERIOD 9****************
+		 *********************** 1683*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1683_icon = new ImageIcon("graphics\\1683_q1.png");
+		String q1_1683_Text = "";
+		Question q1_1683 = new Question(q1_1683_Text, q1_1683_icon);
+		
+		// A1
+		ImageIcon a1_1683_icon = new ImageIcon("graphics\\1683_a1.jpg");
+		String a1_1683_Text = "";
+		Answer a1_1683 = new Answer(q1_1683_Text, q1_1683_icon);
+		q1_1683.setAnswer(a1_1683);
+		
+		// Q1 add Answers
+		q1_1683.add("Choose0");
+		q1_1683.add("Choose1");
+		q1_1683.add("Choose2");
+		q1_1683.add("Choose3");
+		q1_1683.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList9 = new QuestionBag();
+		qList9.add(q1_1683);
+		period9.setqBag(qList9);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1683 = new ImageIcon("graphics\\1683dinfo.png");
+		String dinfo_1683_text = "";
+		DetailedInfo info1683 = new DetailedInfo (dinfo_1683_text, "", dinfo_1683);
+		period9.setInfo(info1683);
+		
+		/********************** PERIOD 10****************
+		 *********************** 1699*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1699_icon = new ImageIcon("graphics\\1699_q1.png");
+		String q1_1699_Text = "";
+		Question q1_1699 = new Question(q1_1699_Text, q1_1699_icon);
+		
+		// A1
+		ImageIcon a1_1699_icon = new ImageIcon("graphics\\1699_a1.jpg");
+		String a1_1699_Text = "";
+		Answer a1_1699 = new Answer(q1_1699_Text, q1_1699_icon);
+		q1_1699.setAnswer(a1_1699);
+		
+		// Q1 add Answers
+		q1_1699.add("Choose0");
+		q1_1699.add("Choose1");
+		q1_1699.add("Choose2");
+		q1_1699.add("Choose3");
+		q1_1699.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList10 = new QuestionBag();
+		qList10.add(q1_1699);
+		period10.setqBag(qList10);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1699 = new ImageIcon("graphics\\1699dinfo.png");
+		String dinfo_1699_text = "";
+		DetailedInfo info1699 = new DetailedInfo (dinfo_1699_text, "", dinfo_1699);
+		period10.setInfo(info1699);
+		
+		/********************** PERIOD 11****************
+		 *********************** 1718*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1718_icon = new ImageIcon("graphics\\1718_q1.png");
+		String q1_1718_Text = "";
+		Question q1_1718 = new Question(q1_1718_Text, q1_1718_icon);
+		
+		// A1
+		ImageIcon a1_1718_icon = new ImageIcon("graphics\\1718_a1.jpg");
+		String a1_1718_Text = "";
+		Answer a1_1718 = new Answer(q1_1718_Text, q1_1718_icon);
+		q1_1718.setAnswer(a1_1718);
+		
+		// Q1 add Answers
+		q1_1718.add("Choose0");
+		q1_1718.add("Choose1");
+		q1_1718.add("Choose2");
+		q1_1718.add("Choose3");
+		q1_1718.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList11 = new QuestionBag();
+		qList11.add(q1_1718);
+		period11.setqBag(qList11);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1718 = new ImageIcon("graphics\\1718dinfo.png");
+		String dinfo_1718_text = "";
+		DetailedInfo info1718 = new DetailedInfo (dinfo_1718_text, "", dinfo_1718);
+		period11.setInfo(info1718);
+		
+		/********************** PERIOD 12****************
+		 *********************** 1739*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1739_icon = new ImageIcon("graphics\\1739_q1.png");
+		String q1_1739_Text = "";
+		Question q1_1739 = new Question(q1_1739_Text, q1_1739_icon);
+		
+		// A1
+		ImageIcon a1_1739_icon = new ImageIcon("graphics\\1739_a1.jpg");
+		String a1_1739_Text = "";
+		Answer a1_1739 = new Answer(q1_1739_Text, q1_1739_icon);
+		q1_1739.setAnswer(a1_1739);
+		
+		// Q1 add Answers
+		q1_1739.add("Choose0");
+		q1_1739.add("Choose1");
+		q1_1739.add("Choose2");
+		q1_1739.add("Choose3");
+		q1_1739.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList12 = new QuestionBag();
+		qList12.add(q1_1739);
+		period12.setqBag(qList12);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1739 = new ImageIcon("graphics\\1739dinfo.png");
+		String dinfo_1739_text = "";
+		DetailedInfo info1739 = new DetailedInfo (dinfo_1739_text, "", dinfo_1739);
+		period12.setInfo(info1739);
+		
+		/********************** PERIOD 13****************
+		 *********************** 1774*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1774_icon = new ImageIcon("graphics\\1774_q1.png");
+		String q1_1774_Text = "";
+		Question q1_1774 = new Question(q1_1774_Text, q1_1774_icon);
+		
+		// A1
+		ImageIcon a1_1774_icon = new ImageIcon("graphics\\1774_a1.jpg");
+		String a1_1774_Text = "";
+		Answer a1_1774 = new Answer(q1_1774_Text, q1_1774_icon);
+		q1_1774.setAnswer(a1_1774);
+		
+		// Q1 add Answers
+		q1_1774.add("Choose0");
+		q1_1774.add("Choose1");
+		q1_1774.add("Choose2");
+		q1_1774.add("Choose3");
+		q1_1774.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList13 = new QuestionBag();
+		qList13.add(q1_1774);
+		period13.setqBag(qList13);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1774 = new ImageIcon("graphics\\1774dinfo.png");
+		String dinfo_1774_text = "";
+		DetailedInfo info1774 = new DetailedInfo (dinfo_1774_text, "", dinfo_1774);
+		period13.setInfo(info1774);
+		
+		/********************** PERIOD 14****************
+		 *********************** 1783*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1783_icon = new ImageIcon("graphics\\1783_q1.png");
+		String q1_1783_Text = "";
+		Question q1_1783 = new Question(q1_1783_Text, q1_1783_icon);
+		
+		// A1
+		ImageIcon a1_1783_icon = new ImageIcon("graphics\\1783_a1.jpg");
+		String a1_1783_Text = "";
+		Answer a1_1783 = new Answer(q1_1783_Text, q1_1783_icon);
+		q1_1783.setAnswer(a1_1783);
+		
+		// Q1 add Answers
+		q1_1783.add("Choose0");
+		q1_1783.add("Choose1");
+		q1_1783.add("Choose2");
+		q1_1783.add("Choose3");
+		q1_1783.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList14 = new QuestionBag();
+		qList14.add(q1_1783);
+		period14.setqBag(qList14);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1783 = new ImageIcon("graphics\\1783dinfo.png");
+		String dinfo_1783_text = "";
+		DetailedInfo info1783 = new DetailedInfo (dinfo_1783_text, "", dinfo_1783);
+		period14.setInfo(info1783);
+		
+		/********************** PERIOD 15****************
+		 *********************** 1792*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1792_icon = new ImageIcon("graphics\\1792_q1.png");
+		String q1_1792_Text = "";
+		Question q1_1792 = new Question(q1_1792_Text, q1_1792_icon);
+		
+		// A1
+		ImageIcon a1_1792_icon = new ImageIcon("graphics\\1792_a1.jpg");
+		String a1_1792_Text = "";
+		Answer a1_1792 = new Answer(q1_1792_Text, q1_1792_icon);
+		q1_1792.setAnswer(a1_1792);
+		
+		// Q1 add Answers
+		q1_1792.add("Choose0");
+		q1_1792.add("Choose1");
+		q1_1792.add("Choose2");
+		q1_1792.add("Choose3");
+		q1_1792.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList15 = new QuestionBag();
+		qList15.add(q1_1792);
+		period15.setqBag(qList15);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1792 = new ImageIcon("graphics\\1792dinfo.png");
+		String dinfo_1792_text = "";
+		DetailedInfo info1792 = new DetailedInfo (dinfo_1792_text, "", dinfo_1792);
+		period15.setInfo(info1792);
+		
+		/********************** PERIOD 16****************
+		 *********************** 1798*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1798_icon = new ImageIcon("graphics\\1798_q1.png");
+		String q1_1798_Text = "";
+		Question q1_1798 = new Question(q1_1798_Text, q1_1798_icon);
+		
+		// A1
+		ImageIcon a1_1798_icon = new ImageIcon("graphics\\1798_a1.jpg");
+		String a1_1798_Text = "";
+		Answer a1_1798 = new Answer(q1_1798_Text, q1_1798_icon);
+		q1_1798.setAnswer(a1_1798);
+		
+		// Q1 add Answers
+		q1_1798.add("Choose0");
+		q1_1798.add("Choose1");
+		q1_1798.add("Choose2");
+		q1_1798.add("Choose3");
+		q1_1798.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList16 = new QuestionBag();
+		qList16.add(q1_1798);
+		period16.setqBag(qList16);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1798 = new ImageIcon("graphics\\1798dinfo.png");
+		String dinfo_1798_text = "";
+		DetailedInfo info1798 = new DetailedInfo (dinfo_1798_text, "", dinfo_1798);
+		period16.setInfo(info1798);
+		
+		/********************** PERIOD 17****************
+		 *********************** 1801*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1801_icon = new ImageIcon("graphics\\1801_q1.png");
+		String q1_1801_Text = "";
+		Question q1_1801 = new Question(q1_1801_Text, q1_1801_icon);
+		
+		// A1
+		ImageIcon a1_1801_icon = new ImageIcon("graphics\\1801_a1.jpg");
+		String a1_1801_Text = "";
+		Answer a1_1801 = new Answer(q1_1801_Text, q1_1801_icon);
+		q1_1801.setAnswer(a1_1801);
+		
+		// Q1 add Answers
+		q1_1801.add("Choose0");
+		q1_1801.add("Choose1");
+		q1_1801.add("Choose2");
+		q1_1801.add("Choose3");
+		q1_1801.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList17 = new QuestionBag();
+		qList17.add(q1_1801);
+		period17.setqBag(qList17);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1801 = new ImageIcon("graphics\\1801dinfo.png");
+		String dinfo_1801_text = "";
+		DetailedInfo info1801 = new DetailedInfo (dinfo_1801_text, "", dinfo_1801);
+		period17.setInfo(info1801);
+		
+		/********************** PERIOD 18****************
+		 *********************** 1812*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1812_icon = new ImageIcon("graphics\\1812_q1.png");
+		String q1_1812_Text = "";
+		Question q1_1812 = new Question(q1_1812_Text, q1_1812_icon);
+		
+		// A1
+		ImageIcon a1_1812_icon = new ImageIcon("graphics\\1812_a1.jpg");
+		String a1_1812_Text = "";
+		Answer a1_1812 = new Answer(q1_1812_Text, q1_1812_icon);
+		q1_1812.setAnswer(a1_1812);
+		
+		// Q1 add Answers
+		q1_1812.add("Choose0");
+		q1_1812.add("Choose1");
+		q1_1812.add("Choose2");
+		q1_1812.add("Choose3");
+		q1_1812.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList18 = new QuestionBag();
+		qList18.add(q1_1812);
+		period18.setqBag(qList18);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1812 = new ImageIcon("graphics\\1812dinfo.png");
+		String dinfo_1812_text = "";
+		DetailedInfo info1812 = new DetailedInfo (dinfo_1812_text, "", dinfo_1812);
+		period18.setInfo(info1812);
+		
+		/********************** PERIOD 19****************
+		 *********************** 1817*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1817_icon = new ImageIcon("graphics\\1817_q1.png");
+		String q1_1817_Text = "";
+		Question q1_1817 = new Question(q1_1817_Text, q1_1817_icon);
+		
+		// A1
+		ImageIcon a1_1817_icon = new ImageIcon("graphics\\1817_a1.jpg");
+		String a1_1817_Text = "";
+		Answer a1_1817 = new Answer(q1_1817_Text, q1_1817_icon);
+		q1_1817.setAnswer(a1_1817);
+		
+		// Q1 add Answers
+		q1_1817.add("Choose0");
+		q1_1817.add("Choose1");
+		q1_1817.add("Choose2");
+		q1_1817.add("Choose3");
+		q1_1817.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList19 = new QuestionBag();
+		qList19.add(q1_1817);
+		period19.setqBag(qList19);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1817 = new ImageIcon("graphics\\1817dinfo.png");
+		String dinfo_1817_text = "";
+		DetailedInfo info1817 = new DetailedInfo (dinfo_1817_text, "", dinfo_1817);
+		period19.setInfo(info1817);
+		
+		/********************** PERIOD 20****************
+		 *********************** 1829*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1829_icon = new ImageIcon("graphics\\1829_q1.png");
+		String q1_1829_Text = "";
+		Question q1_1829 = new Question(q1_1829_Text, q1_1829_icon);
+		
+		// A1
+		ImageIcon a1_1829_icon = new ImageIcon("graphics\\1829_a1.jpg");
+		String a1_1829_Text = "";
+		Answer a1_1829 = new Answer(q1_1829_Text, q1_1829_icon);
+		q1_1829.setAnswer(a1_1829);
+		
+		// Q1 add Answers
+		q1_1829.add("Choose0");
+		q1_1829.add("Choose1");
+		q1_1829.add("Choose2");
+		q1_1829.add("Choose3");
+		q1_1829.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList20 = new QuestionBag();
+		qList20.add(q1_1829);
+		period20.setqBag(qList20);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1829 = new ImageIcon("graphics\\1829dinfo.png");
+		String dinfo_1829_text = "";
+		DetailedInfo info1829 = new DetailedInfo (dinfo_1829_text, "", dinfo_1829);
+		period20.setInfo(info1829);
+		
+		/********************** PERIOD 21****************
+		 *********************** 1830*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1830_icon = new ImageIcon("graphics\\1830_q1.png");
+		String q1_1830_Text = "";
+		Question q1_1830 = new Question(q1_1830_Text, q1_1830_icon);
+		
+		// A1
+		ImageIcon a1_1830_icon = new ImageIcon("graphics\\1830_a1.jpg");
+		String a1_1830_Text = "";
+		Answer a1_1830 = new Answer(q1_1830_Text, q1_1830_icon);
+		q1_1830.setAnswer(a1_1830);
+		
+		// Q1 add Answers
+		q1_1830.add("Choose0");
+		q1_1830.add("Choose1");
+		q1_1830.add("Choose2");
+		q1_1830.add("Choose3");
+		q1_1830.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList21 = new QuestionBag();
+		qList21.add(q1_1830);
+		period21.setqBag(qList21);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1830 = new ImageIcon("graphics\\1830dinfo.png");
+		String dinfo_1830_text = "";
+		DetailedInfo info1830 = new DetailedInfo (dinfo_1830_text, "", dinfo_1830);
+		period21.setInfo(info1830);
+		
+		/********************** PERIOD 22****************
+		 *********************** 1862*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1862_icon = new ImageIcon("graphics\\1862_q1.png");
+		String q1_1862_Text = "";
+		Question q1_1862 = new Question(q1_1862_Text, q1_1862_icon);
+		
+		// A1
+		ImageIcon a1_1862_icon = new ImageIcon("graphics\\1862_a1.jpg");
+		String a1_1862_Text = "";
+		Answer a1_1862 = new Answer(q1_1862_Text, q1_1862_icon);
+		q1_1862.setAnswer(a1_1862);
+		
+		// Q1 add Answers
+		q1_1862.add("Choose0");
+		q1_1862.add("Choose1");
+		q1_1862.add("Choose2");
+		q1_1862.add("Choose3");
+		q1_1862.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList22 = new QuestionBag();
+		qList22.add(q1_1862);
+		period22.setqBag(qList22);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1862 = new ImageIcon("graphics\\1862dinfo.png");
+		String dinfo_1862_text = "";
+		DetailedInfo info1862 = new DetailedInfo (dinfo_1862_text, "", dinfo_1862);
+		period22.setInfo(info1862);
+		
+		/********************** PERIOD 23****************
+		 *********************** 1878*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1878_icon = new ImageIcon("graphics\\1878_q1.png");
+		String q1_1878_Text = "";
+		Question q1_1878 = new Question(q1_1878_Text, q1_1878_icon);
+		
+		// A1
+		ImageIcon a1_1878_icon = new ImageIcon("graphics\\1878_a1.jpg");
+		String a1_1878_Text = "";
+		Answer a1_1878 = new Answer(q1_1878_Text, q1_1878_icon);
+		q1_1878.setAnswer(a1_1878);
+		
+		// Q1 add Answers
+		q1_1878.add("Choose0");
+		q1_1878.add("Choose1");
+		q1_1878.add("Choose2");
+		q1_1878.add("Choose3");
+		q1_1878.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList23 = new QuestionBag();
+		qList23.add(q1_1878);
+		period23.setqBag(qList23);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1878 = new ImageIcon("graphics\\1878dinfo.png");
+		String dinfo_1878_text = "";
+		DetailedInfo info1878 = new DetailedInfo (dinfo_1878_text, "", dinfo_1878);
+		period23.setInfo(info1878);
+		
+		/********************** PERIOD 24****************
+		 *********************** 1881*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1881_icon = new ImageIcon("graphics\\1881_q1.png");
+		String q1_1881_Text = "";
+		Question q1_1881 = new Question(q1_1881_Text, q1_1881_icon);
+		
+		// A1
+		ImageIcon a1_1881_icon = new ImageIcon("graphics\\1881_a1.jpg");
+		String a1_1881_Text = "";
+		Answer a1_1881 = new Answer(q1_1881_Text, q1_1881_icon);
+		q1_1881.setAnswer(a1_1881);
+		
+		// Q1 add Answers
+		q1_1881.add("Choose0");
+		q1_1881.add("Choose1");
+		q1_1881.add("Choose2");
+		q1_1881.add("Choose3");
+		q1_1881.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList24 = new QuestionBag();
+		qList24.add(q1_1881);
+		period24.setqBag(qList24);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1881 = new ImageIcon("graphics\\1881dinfo.png");
+		String dinfo_1881_text = "";
+		DetailedInfo info1881 = new DetailedInfo (dinfo_1881_text, "", dinfo_1881);
+		period24.setInfo(info1881);
+		
+		/********************** PERIOD 25****************
+		 *********************** 1882*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1882_icon = new ImageIcon("graphics\\1882_q1.png");
+		String q1_1882_Text = "";
+		Question q1_1882 = new Question(q1_1882_Text, q1_1882_icon);
+		
+		// A1
+		ImageIcon a1_1882_icon = new ImageIcon("graphics\\1882_a1.jpg");
+		String a1_1882_Text = "";
+		Answer a1_1882 = new Answer(q1_1882_Text, q1_1882_icon);
+		q1_1882.setAnswer(a1_1882);
+		
+		// Q1 add Answers
+		q1_1882.add("Choose0");
+		q1_1882.add("Choose1");
+		q1_1882.add("Choose2");
+		q1_1882.add("Choose3");
+		q1_1882.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList25 = new QuestionBag();
+		qList25.add(q1_1882);
+		period25.setqBag(qList25);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1882 = new ImageIcon("graphics\\1882dinfo.png");
+		String dinfo_1882_text = "";
+		DetailedInfo info1882 = new DetailedInfo (dinfo_1882_text, "", dinfo_1882);
+		period25.setInfo(info1882);
+		
+		/********************** PERIOD 26****************
+		 *********************** 1912*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1912_icon = new ImageIcon("graphics\\1912_q1.png");
+		String q1_1912_Text = "";
+		Question q1_1912 = new Question(q1_1912_Text, q1_1912_icon);
+		
+		// A1
+		ImageIcon a1_1912_icon = new ImageIcon("graphics\\1912_a1.jpg");
+		String a1_1912_Text = "";
+		Answer a1_1912 = new Answer(q1_1912_Text, q1_1912_icon);
+		q1_1912.setAnswer(a1_1912);
+		
+		// Q1 add Answers
+		q1_1912.add("Choose0");
+		q1_1912.add("Choose1");
+		q1_1912.add("Choose2");
+		q1_1912.add("Choose3");
+		q1_1912.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList26 = new QuestionBag();
+		qList26.add(q1_1912);
+		period26.setqBag(qList26);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1912 = new ImageIcon("graphics\\1912dinfo.png");
+		String dinfo_1912_text = "";
+		DetailedInfo info1912 = new DetailedInfo (dinfo_1912_text, "", dinfo_1912);
+		period26.setInfo(info1912);
+		
+		/********************** PERIOD 27****************
+		 *********************** 1913*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1913_icon = new ImageIcon("graphics\\1913_q1.png");
+		String q1_1913_Text = "";
+		Question q1_1913 = new Question(q1_1913_Text, q1_1913_icon);
+		
+		// A1
+		ImageIcon a1_1913_icon = new ImageIcon("graphics\\1913_a1.jpg");
+		String a1_1913_Text = "";
+		Answer a1_1913 = new Answer(q1_1913_Text, q1_1913_icon);
+		q1_1913.setAnswer(a1_1913);
+		
+		// Q1 add Answers
+		q1_1913.add("Choose0");
+		q1_1913.add("Choose1");
+		q1_1913.add("Choose2");
+		q1_1913.add("Choose3");
+		q1_1913.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList27 = new QuestionBag();
+		qList27.add(q1_1913);
+		period27.setqBag(qList27);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1913 = new ImageIcon("graphics\\1913dinfo.png");
+		String dinfo_1913_text = "";
+		DetailedInfo info1913 = new DetailedInfo (dinfo_1913_text, "", dinfo_1913);
+		period27.setInfo(info1913);
+		
+		/********************** PERIOD 28****************
+		 *********************** 1914*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1914_icon = new ImageIcon("graphics\\1914_q1.png");
+		String q1_1914_Text = "";
+		Question q1_1914 = new Question(q1_1914_Text, q1_1914_icon);
+		
+		// A1
+		ImageIcon a1_1914_icon = new ImageIcon("graphics\\1914_a1.jpg");
+		String a1_1914_Text = "";
+		Answer a1_1914 = new Answer(q1_1914_Text, q1_1914_icon);
+		q1_1914.setAnswer(a1_1914);
+		
+		// Q1 add Answers
+		q1_1914.add("Choose0");
+		q1_1914.add("Choose1");
+		q1_1914.add("Choose2");
+		q1_1914.add("Choose3");
+		q1_1914.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList28 = new QuestionBag();
+		qList28.add(q1_1914);
+		period28.setqBag(qList28);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1914 = new ImageIcon("graphics\\1914dinfo.png");
+		String dinfo_1914_text = "";
+		DetailedInfo info1914 = new DetailedInfo (dinfo_1914_text, "", dinfo_1914);
+		period28.setInfo(info1914);
+		
+		/********************** PERIOD 29****************
+		 *********************** 1920*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1920_icon = new ImageIcon("graphics\\1920_q1.png");
+		String q1_1920_Text = "";
+		Question q1_1920 = new Question(q1_1920_Text, q1_1920_icon);
+		
+		// A1
+		ImageIcon a1_1920_icon = new ImageIcon("graphics\\1920_a1.jpg");
+		String a1_1920_Text = "";
+		Answer a1_1920 = new Answer(q1_1920_Text, q1_1920_icon);
+		q1_1920.setAnswer(a1_1920);
+		
+		// Q1 add Answers
+		q1_1920.add("Choose0");
+		q1_1920.add("Choose1");
+		q1_1920.add("Choose2");
+		q1_1920.add("Choose3");
+		q1_1920.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList29 = new QuestionBag();
+		qList29.add(q1_1920);
+		period29.setqBag(qList29);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1920 = new ImageIcon("graphics\\1920dinfo.png");
+		String dinfo_1920_text = "";
+		DetailedInfo info1920 = new DetailedInfo (dinfo_1920_text, "", dinfo_1920);
+		period29.setInfo(info1920);
+		
+		/********************** PERIOD 30****************
+		 *********************** 1923*******************
+		 ***********************************************/
+		// Q1
+		ImageIcon q1_1923_icon = new ImageIcon("graphics\\1923_q1.png");
+		String q1_1923_Text = "";
+		Question q1_1923 = new Question(q1_1923_Text, q1_1923_icon);
+		
+		// A1
+		ImageIcon a1_1923_icon = new ImageIcon("graphics\\1923_a1.jpg");
+		String a1_1923_Text = "";
+		Answer a1_1923 = new Answer(q1_1923_Text, q1_1923_icon);
+		q1_1923.setAnswer(a1_1923);
+		
+		// Q1 add Answers
+		q1_1923.add("Choose0");
+		q1_1923.add("Choose1");
+		q1_1923.add("Choose2");
+		q1_1923.add("Choose3");
+		q1_1923.setRightAnswerIndex(0);
+		
+		// QuestionBag 1 & Add to Period 1
+		qList30 = new QuestionBag();
+		qList30.add(q1_1923);
+		period30.setqBag(qList30);
+
+		
+		// DetailedInfo1
+		ImageIcon dinfo_1923 = new ImageIcon("graphics\\1923dinfo.png");
+		String dinfo_1923_text = "";
+		DetailedInfo info1923 = new DetailedInfo (dinfo_1923_text, "", dinfo_1923);
+		period30.setInfo(info1923);
+	}
+	
+	public Period firstPeriod() {
+		return period1;
+	}
+	
+	public QuestionBag getNextQuestionBag(){
+		index++;
+		return arr.get(index-1);
+	}
+	
+}
+
