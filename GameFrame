@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class GameFrame extends JInternalFrame {
+public class GameFrame extends JFrame {
 	
 	// PROPERTIES
 	StartMenuPanel smenu;
